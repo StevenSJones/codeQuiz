@@ -1,39 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!--link to bootstrap-->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <title>codeQuiz</title>
 </head>
 <link rel="stylesheet" href="style.css" />
-
+ 
 <body style="height:1500px">
-  <!--top fixed nav bar-->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-    <a class="navbar-brand" href="#">Created by SSJONES</a>
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-    </ul>
-  </nav>
-  <div class="container-fluid , card"></div>
-  <p>Click below to begin the codeQuiz</p>
-  <button onclick="startQuiz()">Start Quiz</button>
+ 
+  <h1>Click below to begin the codeQuiz</h1>
+  <button id="startquiz" onclick="startQuiz()">Start Quiz</button>
   <hr />
-  <p id="question">Press "Start Quiz" to start answering questions!</p>
 
+  <div class="card">
+  <p id="question">Press "Start Quiz" to start answering questions!</p>
+  <p id="timer">Time Remaining: 0</p>
+ 
   <label id="questionNum"></label> <br>
   <input type="radio" name="answer" value="question1">
   <label id="q1">Answer 1</label> <br>
@@ -43,11 +34,26 @@
   <label id="q3">Answer 3</label> <br>
   <input type="radio" name="answer" value="question4">
   <label id="q4">Answer 4</label> <br>
-
+ 
   <button onclick="answer()">Submit Answer</button>
-  </div>
+</div>
   <hr>
-
+  <h2>High Scores</h2>
+ 
+    <label id="score">Your Score: 0</label>
+    <br>
+    Initials:
+  <input type="text" name="initials" id="initials">
+  <button onclick="submitScore()">Submit</button>
+ 
+ 
+  <table border=1 id="scoreTable">
+    <tr>
+      <th>Initials</th>
+      <th>Score</th>
+    </tr>
+  </table>
+ 
 </body>
 <!--include a footer and my stamp-->
 <footer class="footer mt-auto py-3 bg-dark">
@@ -56,8 +62,5 @@
   </div>
 </footer>
 <script src="script.js"></script>
-
+ 
 </html>
-
-
-

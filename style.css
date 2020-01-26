@@ -12,7 +12,7 @@ body,
 }
 body {
   font-family: sans-serif;
-  background-color: rgb(34, 187, 233);
+  background-color: rgb(34, 153, 233);
 }
 header {
   text-align: center;
@@ -46,10 +46,17 @@ button[disabled] {
   padding: 30px 40px
 
 }
+.card-header::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+}
 
 .btn {
   border: none;
-  background-color: rgb(34, 187, 233);
+  background-color: rgb(98, 104, 107);
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
