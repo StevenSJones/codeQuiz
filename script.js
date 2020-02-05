@@ -41,17 +41,17 @@ var timerCounter = 75;
 function alertMe() {
   /* Originally I had If timer has gone 2 or less times, console log time is up but I changed it too
    always true because it will be always true*/
-  if (timerCounter > 0) {
+if (timerCounter > 0) {
     timerCounter -= 1;
     document.getElementById("timer").innerHTML =
       "Time Remaining: " + timerCounter;
   }
-  // If timer has already gone 2 times, then stop timer
-  else {
-    //The clearInterval() method stops the executions of the function specified in the setInterval() method
-    questionIndex = questions.length;
-    displayCurrentQuestion();
-    clearInterval(myTimer);
+        // If timer has already gone 2 times, then stop timer
+        else {
+            //The clearInterval() method stops the executions of the function specified in the setInterval() method
+            questionIndex = questions.length;
+            displayCurrentQuestion();
+            clearInterval(myTimer);
   }
 }
  
